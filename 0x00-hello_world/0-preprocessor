@@ -1,10 +1,2 @@
 #!/bin/bash
-/**
-* main - entry point
-*
-* Always return 0 (success)
-*/
-int main(void)
-{
-return (0);
-}
+gcc main.c -o $CFILE
