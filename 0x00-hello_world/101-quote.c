@@ -1,16 +1,13 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-/** 
-* program to print 'and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line, to the standard error.
-* not to use printf nor puts
-* print a new line
-* direct to standard error
-*/
+/**
+ * main - Entry point
+ * Return: Always 1 (Success)
+ */
 int main(void)
 {
-	write(STDERR_FILENO, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
-	
-	return(1)
-
-
+	write(STDOUT_FILENO, "and that piece of art is useful
+			\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
 }
