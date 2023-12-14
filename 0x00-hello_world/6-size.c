@@ -1,6 +1,10 @@
-/* prigram to print size of types */
 #include <stdio.h>
-
+/**
+ * main - nentry poin
+ * prints size of types
+ *
+ * return: always 0
+ */
 int main(void)
 {
 	printf("Size of a char: %zu byte(s)\n", sizeof(char));
@@ -9,5 +13,5 @@ int main(void)
 	printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
 	printf("Size of a float: %zu byte(s)\n", sizeof(float));
 
-	return (0)
+	return (0);
 }
