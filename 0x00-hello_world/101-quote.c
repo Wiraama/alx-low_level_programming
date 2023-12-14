@@ -1,13 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 
 /**
  * main - Entry point
- * Return: Always 1 (Success)
+ * prints "and that piece of art is useful " - Dora Korpar, 2015-10-19"' followed by a new line, to starndard error.
+ *
+ * Return: always 1.
  */
 int main(void)
 {
-	fwrite(STDOUT_FILENO, "and that piece of art is useful
-			\" - Dora Korpar, 2015-10-19\n", 59);
-	return (1);
+	const char message[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+    write(STDERR_FILENO, message, sizeof(message) - 1);
+    return 1;
 }
