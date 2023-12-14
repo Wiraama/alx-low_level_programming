@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - nentry poin
+ * main - entry point
  * prints size of types
  *
  * return: always 0
