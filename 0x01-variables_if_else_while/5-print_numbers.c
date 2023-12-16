@@ -8,9 +8,14 @@
  */
 int main(void)
 {
-	char n;
+        char n;
 
-	/* to print numbers*/
-	for (n = 0; n <= '10' ++1);
-	printf('n\n');
+        /* to print numbers*/
+        for (n = 0; n <= '10'; ++n);
+        {
+                putchar (n);
+        }
+        putchar ('\n');
+        
+        return(0);
 }
