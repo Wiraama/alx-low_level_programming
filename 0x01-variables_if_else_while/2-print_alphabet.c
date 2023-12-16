@@ -9,7 +9,7 @@
  * Return: Always 0.
  */
 int main(void)
-{	
+{
 	char c;
 	/* to print alphabet in lower case*/
 	for (c = 'a'; c <= 'z'; ++c)
