@@ -11,7 +11,7 @@ int main(void)
 	char c;
 
 	/* this should print lower case letters*/
-	for (c = 'a' c <= 'z' ++c);
+	for (c = 'a'; c <= 'z'; ++c);
 	{
 		putchar(c);
 	}
