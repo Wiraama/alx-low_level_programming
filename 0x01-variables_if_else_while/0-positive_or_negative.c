@@ -4,7 +4,8 @@
 
 /**
  * main - entry point tp program
- * This program will assign a random number to the variable n each time it is executed
+ * This program will assign a random number 
+ * to the variable n each time it is executed
  *
  * return: Always 0
  */
@@ -21,6 +22,7 @@ int main(void)
 		printf("%d is negative\n", n);
 	else
 		printf("%d is zero\n", n);
+	/*always return*/
 
 	return (0);
 }
