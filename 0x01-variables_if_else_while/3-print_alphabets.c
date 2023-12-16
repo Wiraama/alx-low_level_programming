@@ -12,16 +12,12 @@ int main(void)
 
 	/* this should print lower case letters*/
 	for (c = 'a'; c <= 'z'; ++c);
-	{
-		putchar(c);
-	}
+	putchar(c);
 
 	/*this should print uppercase letter*/
 
 	for (c = 'A'; c <= 'Z'; ++c);
-	{
-		putchar(c);
-	}
+	putchar(c);
 
 	/*to print new line*/
 
