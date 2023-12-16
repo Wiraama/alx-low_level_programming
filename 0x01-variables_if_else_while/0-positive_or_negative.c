@@ -4,10 +4,10 @@
 
 /**
  * main - entry point tp program
- * This program will assign a random number 
+ * This program will assign a random number
  * to the variable n each time it is executed
  *
- * return: Always 0
+ * return: Always (0)
  */
 int main(void)
 {
