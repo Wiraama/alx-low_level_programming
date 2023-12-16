@@ -3,9 +3,10 @@
 /**
  * main - entry point
  *
- * Declaration: program to print the alphabet in lowercase followed by a new line
+ * Declaration: program to print the alphabet in -
+ *              lowercase followed by a new line
  *
- * return: always 0
+ * Return: Always 0.
  */
 int main(void)
 {	
@@ -19,5 +20,5 @@ int main(void)
 /*print a new line*/
 putchar('\n');
 
-return 0;
+return (0);
 }
