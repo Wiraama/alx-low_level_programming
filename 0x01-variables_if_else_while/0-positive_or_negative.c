@@ -4,8 +4,7 @@
 
 /**
  * main - entry point tp program
- * This program will assign a random number
- * to the variable n each time it is executed
+ * Description: program to print random number
  *
  * return: Always (0)
  */
