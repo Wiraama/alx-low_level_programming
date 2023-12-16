@@ -4,7 +4,8 @@
 
 /**
  * main - entry point
- * Description: program to print random number
+ *
+ * This program will assign a random number to the variable n each time it is executed
  *
  * return: Always (0)
  */
