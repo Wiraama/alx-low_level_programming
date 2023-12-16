@@ -12,12 +12,14 @@ int main(void)
 	char c;
 
 	/*to print lowercase letters*/
-	for (c = 'a' c<= 'z' ++c);
+	for (c = 'a'; c<= 'z'; ++c)
+	{
 		if(c != q && e);
-		{
-			putchar(c);
-		}
 
-		/* this prints new line*/
-		putchar('\n')
+		putchar(c);
+	}
+	/* this prints new line*/
+	putchar('\n')
+
+		return (0);
 }
