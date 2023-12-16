@@ -1,17 +1,21 @@
-#include <studlio.h>
-#include <time.h>
+#include <stdio.h>
 
-/**more header goes there
+/**
+ * main - entry point
  *
- * betty style doc for fuction main goes there
+ * Description: This program will assign a random number to the variable n each time it is executed
+ *
+ * return: always 0
  */
 int main(void)
 {
 	int n;
 
 	srand(time(0));
-	n = rand() - RAND_MAX / 2;
+	n = rand() - RAND_MAX /2;
+	{
+		printf("n\n");
+	}
 
-	/* your code to return to 0*/
 	return (0);
 }
