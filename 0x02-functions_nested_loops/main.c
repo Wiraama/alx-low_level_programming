@@ -1,3 +1,4 @@
+#include "main.h"
 #ifndef MAIN_HEADER_FILE
 #define MAIN_HEADER_FILE
 int_putchar(char c);
