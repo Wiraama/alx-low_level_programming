@@ -2,15 +2,13 @@
 
 /**
  *  function that checks for a digit (0 through 9).
+ *  Returns 1 if c is a digit
+ *  Returns 0 otherwise
  */
-	if(c >= 0, && c < 10, c++)
-	{
-		printf("This is a digit\n");
+int _isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
 		return (1);
-	}
 	else
-	{
-		printf("Error\n");
 		return (0);
-	}
 }
