@@ -1,18 +1,14 @@
 #include "main.h"
-
-/* This prototype should cheack for upercase letter*/
+/**
+*_isupper - function that verifies if a  character is uppercase or not
+*@c: tested character
+*Return: returns 1 if it is uppercase , 0 if not
+*/
 
 int _isupper(int c)
 {
-	if(letter >= 'A', && letter <= 'Z', letter++)
-	{
-		printf("Uppercase Letter\n");
-		return (1);
-	}
+if ((c >= 'A') && (c <= 'Z'))
+return (1);
 
-	else
-	{
-		printf("Error with the letter\n");
-		return (0);
-	}
+return (0);
 }
