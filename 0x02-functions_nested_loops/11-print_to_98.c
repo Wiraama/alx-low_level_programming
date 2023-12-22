@@ -1,25 +1,51 @@
-#include <stdio.h>
-/**
- * program prints  all natural numbers from n to 98, followed by a new line.
- * Numbers must be separated by a comma, followed by a space
- * Numbers should be printed in order
- * The first printed number should be the number passed to your function
- * The last printed number should be 98
- * You are allowed to use the standard library
- */
-void print_to_98(int n)
-{
-	if (n >= 98)
-	{
-		while (n > 98)
-			printf("%d, ", n--);
-		printf("%d\n", n);
-	}
+#include "main.c"
 
-	else
+/**
+  * print_times_table - Prints a multiplication table up to param
+  * @n: The number to be treated
+  *
+  * Return: Number matrix
+  */
+void print_times_table(int n)
+{
+	int x, y, z;
+
+	if (n >= 0 && n <= 14)
 	{
-		while (n < 98)
-			printf("%d, ", n++);
-		printf("%d\n", n);
+		for (x = 0; x <= n; x++)
+		{
+			for (y = 0; y <= n; y++)
+			{
+				z = x * y;
+				if (z > 99)
+				{
+					_putchar(',');
+					_putchar(32);
+					_putchar((z / 100) + '0');
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
+				}
+				else if (z > 9)
+				{
+					_putchar(',');
+					_putchar(32);
+					_putchar(32);
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
+				}
+				else
+				{
+					if (y != 0)
+					{
+						_putchar(',');
+						_putchar(32);
+						_putchar(32);
+						_putchar(32);
+					}
+					_putchar(z + '0');
+				}
+			}
+			_putchar('\n');
+		}
 	}
 }

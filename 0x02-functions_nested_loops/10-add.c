@@ -1,17 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * functio that adds two integer and return the function to dthe result
- */
-int add(int, int b)
+  * add - Adds two values
+  * @n1: The first number to be computed
+  * @n2: The second number to be computed
+  *
+  * Return: Integer value
+  */
+int add(int n1, int n2)
 {
-	return x + y;
-}
-int main(void)
-{
-	int result = add(x, y);
-	printf("Result: %d\n", result);
-
-	return 0;
-#include <atdio.h>
+	return (n1 + n2);
 }

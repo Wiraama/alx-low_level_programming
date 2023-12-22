@@ -1,7 +1,11 @@
-#include <stdio.h>
+#include "main.h"
+
 
 /**
+ * print_sign - Prints the sign of a number
  * program to print sigh=n number
+ *
+ * Return 1 or -1
  */
 int print_sign(int n)
 {

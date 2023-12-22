@@ -1,26 +1,31 @@
 #include <stdio.h>
+
 /**
- * main - Enrty point
- *  a program that prints the first 50 Fibonacci numbers, starting with 1 and 2, followed by a new line.
- *
- *  Return: Always 0
- */
-void printFibonacci(int n) {
-    int first = 1, second = 2, next;
+  * main - Prints the first 52 fibonacci numbers
+  *
+  * Return: Nothing!
+  */
+int main(void)
+{
+	int i = 0;
+	long j = 1, k = 2;
 
-    printf("%d, %d", first, second);
+	while (i < 50)
+	{
+		if (i == 0)
+			printf("%ld", j);
+		else if (i == 1)
+			printf(", %ld", k);
+		else
+		{
+			k += j;
+			j = k - j;
+			printf(", %ld", k);
+		}
 
-    for (int i = 3; i <= n; i++) {
-        next = first + second;
-        printf(", %d", next);
+		++i;
+	}
 
-        first = second;
-        second = next;
-    }
-    printf("\n");
-}
-int main() {
-    printFibonacci(50);
-
-    return 0;
+	printf("\n");
+	return (0);
 }
