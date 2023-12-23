@@ -1,51 +1,44 @@
 #include "main.c"
+#include <stdio.h>
 
 /**
-  * print_times_table - Prints a multiplication table up to param
-  * @n: The number to be treated
+  * print_to_98 - Prints all natural numbers from n to 98
+  * @n: The number to start printing from
   *
-  * Return: Number matrix
+  * Return: Always 0.
   */
-void print_times_table(int n)
+void print_to_98(int n)
 {
-	int x, y, z;
-
-	if (n >= 0 && n <= 14)
+	if (n <= 98)
 	{
-		for (x = 0; x <= n; x++)
+		for (; n <= 98; n++)
 		{
-			for (y = 0; y <= n; y++)
+			if (n == 98)
 			{
-				z = x * y;
-				if (z > 99)
-				{
-					_putchar(',');
-					_putchar(32);
-					_putchar((z / 100) + '0');
-					_putchar(((z / 10) % 10) + '0');
-					_putchar((z % 10) + '0');
-				}
-				else if (z > 9)
-				{
-					_putchar(',');
-					_putchar(32);
-					_putchar(32);
-					_putchar(((z / 10) % 10) + '0');
-					_putchar((z % 10) + '0');
-				}
-				else
-				{
-					if (y != 0)
-					{
-						_putchar(',');
-						_putchar(32);
-						_putchar(32);
-						_putchar(32);
-					}
-					_putchar(z + '0');
-				}
+				printf("%d", n);
+				printf("\n");
+				break;
 			}
-			_putchar('\n');
+			else
+			{
+				printf("%d, ", n);
+			}
+		}
+	}
+	else
+	{
+		for (; n >= 98; n--)
+		{
+			if (n == 98)
+			{
+				printf("%d", n);
+				printf("\n");
+				break;
+			}
+			else
+			{
+				printf("%d, ", n);
+			}
 		}
 	}
 }
