@@ -4,8 +4,6 @@
  * print_alphabet - entry point
  *
  * Description: prints the alphabet in lowercase, followed by a new line.
- *
- * Return: Always 0
  */
 void print_alphabet(void)
 {
@@ -16,7 +14,4 @@ void print_alphabet(void)
 			putchar(letter);
 		}
 	putchar('\n');
-
-	print_alphabet();
-	return(0);
 }
