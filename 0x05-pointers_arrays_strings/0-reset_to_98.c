@@ -3,7 +3,7 @@
 /**
  * main - Entry point to the function
  *
- * fuction takes pointer to an int as a parameter and updates the value to 98.
+ * @reset: takes pointer to an int as a parameter and updates the value to 98.
  * @n: pointer
  * Return: Always nothing
  */
