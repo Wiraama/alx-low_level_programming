@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
  * program to print n elements of an array of integers, followed by a new line.
  *
