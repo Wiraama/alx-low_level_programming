@@ -2,8 +2,12 @@
 #include <stdio.h>
 
 /**
- * program to print n elements of an array of integers, followed by a new line.
+ * main - Entry point
  *
+ *
+ * program to print n elements of an array of integers, followed by a new line.
+ * @a: arry
+ * @n: no. of elements
  * return to 0
  */
 void print_array(int *a, int n)

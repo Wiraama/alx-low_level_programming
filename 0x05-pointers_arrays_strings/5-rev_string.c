@@ -1,9 +1,11 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * this function reverses a string
  *
  * @s: will be my string
  */
+void rev_string(char *s)
 {
 	int index;
 

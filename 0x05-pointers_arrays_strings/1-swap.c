@@ -12,8 +12,8 @@
  */
 void swap_int(int *a, int *b)
 {
-	*a = 35;
-	*b = 45;
+	*a = 98;
+	*b = 42;
 
 	printf(" Before swap a=%d b=%d", *a, *b);
 	/**swaping**/
