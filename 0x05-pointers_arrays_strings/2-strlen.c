@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * fuction toreturn the length of a string
+ * @_strlen - fuction toreturn the length of a string
  * @s: string
  *
  * Return: nothing
@@ -11,6 +11,6 @@ int _strlen(char *s)
 {
 	int index;
 
-	for(index = 0; s[index] != '\0' ; index++);
+	for(index = 0; s[index] != '\0'; index++);
 	return (index);
 }
