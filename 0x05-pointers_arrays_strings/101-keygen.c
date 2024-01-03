@@ -2,30 +2,47 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define PASSWORD_LENGTH 12
+/**
+ * generatePassword - Generates a random valid password.
+ * Return: Pointer to the generated password.
+ */
+char *generatePassword(void)
+{
+    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const int passwordLength = 12;
+    char *password = malloc((passwordLength + 1) * sizeof(char));
 
-char generateRandomChar() {
-    const char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+";
-    int index = rand() % (sizeof(charset) - 1);
-    return charset[index];
-}
-
-void generatePassword(char *password, int length) {
-    srand(time(NULL));
-
-    for (int i = 0; i < length; i++) {
-        password[i] = generateRandomChar();
+    if (password == NULL)
+    {
+        perror("Memory allocation failed");
+        exit(EXIT_FAILURE);
     }
 
-    password[length] = '\0';
+    srand(time(NULL));
+
+    for (int i = 0; i < passwordLength; i++)
+    {
+        int index = rand() % (sizeof(charset) - 1);
+        password[i] = charset[index];
+    }
+
+    password[passwordLength] = '\0';
+
+    return password;
 }
 
-int main() {
-    char password[PASSWORD_LENGTH + 1]; // +1 for the null terminator
-
-    generatePassword(password, PASSWORD_LENGTH);
+/**
+ * main - Entry point of the program.
+ * Return: 0 on success.
+ */
+int main(void)
+{
+    char *password = generatePassword();
 
     printf("Generated Password: %s\n", password);
 
+    free(password);
+
     return 0;
 }
+
