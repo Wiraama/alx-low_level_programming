@@ -1,16 +1,51 @@
-include "main.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
- * main - cheak the code
- * 
- * Return: Always 0
+ * print_buffer - prints buffer
+ * @b: buffer
+ * @size: size
+ * Return: void
  */
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
+
+void print_buffer(char *b, int size)
 {
-    char buffer[] = "This is a string!\0And this is the rest of the buffer :)\1\2\3\4\5\6\7#cisfun\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x20\x21\x34\x56#pointersarefun #infernumisfun\n";
-    printf("%s\n", buffer);
-    printf("---------------------------------\n");
-    print_buffer(buffer, sizeof(buffer));
-    return (0);
+	int o, j, i;
+
+	o = 0;
+
+	if (size <= 0)
+	{
+		printf("\n");
+		return;
+	}
+	while (o < size)
+	{
+		j = size - o < 10 ? size - o : 10;
+		printf("%08x: ", o);
+		for (i = 0; i < 10; i++)
+		{
+			if (i < j)
+				printf("%02x", *(b + o + i));
+			else
+				printf("  ");
+			if (i % 2)
+			{
+				printf(" ");
+			}
+		}
+		for (i = 0; i < j; i++)
+		{
+			int c = *(b + o + i);
+
+			if (c < 32 || c > 132)
+			{
+				c = '.';
+			}
+			printf("%c", c);
+		}
+		printf("\n");
+		o += 10;
+	}
 }
+
