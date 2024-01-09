@@ -1,21 +1,22 @@
 #include "main.h"
-
 /**
- * main - Entry point
- * function that fills memory with a constant byte.
+ * _memset - fills memory with a constant byte
  *
- * @*s: pointer to store the pointed memory space
- * @b: the constant byte
- * @n: 
+ * @s: pointer to memory area to fill
+ * @n: the number of bytes to fill
+ * @b: constant byte
  *
- * Return: s
+ * Return: a pointer to the memory area @s
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
-	for (unsigned int i = 0; i < n; i++)
-    {
-        s[i]=b;
-    }
-    return s;
-    
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+
+	return (s);
 }
