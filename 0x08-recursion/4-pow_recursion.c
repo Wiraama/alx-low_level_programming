@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * _pow_recursion - raises x to the power of y
+ *
  * function that returns the value of x raised to the power of y.
  * @x: value
  * @y:power
