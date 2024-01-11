@@ -1,23 +1,19 @@
 #include "main.h"
+
 /**
- * main - check the code
+ * _puts_recursion - Prints a string followed by a new line
+ * @s: string
  *
- * Return: Always 0.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
-int is_prime_number(int n)
+void _puts_recursion(char *s)
 {
-  if (n <= 1)
-  {
-    return 0;
-  }
-  for (int i = 2; i * i <= n; i++)
-  {
-    if (n % i == 0)
-    {
-    return 0;
-    }
-  }
-  return 1;
-
+	if (*s == 0)
+	{
+		_putchar('\n');
+		return;
+	}
+	_putchar(*s);
+	_puts_recursion(s + 1);
 }
