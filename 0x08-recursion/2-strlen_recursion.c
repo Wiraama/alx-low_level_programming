@@ -1,12 +1,10 @@
 #include "main.h"
-
-
 /**
  * _strlen_recursion - main fuction in this program
  *
  * function that returns the length of a string
  *
- * @*s: character to hold the &string
+ * @*s: string
  *
  * Return: value of s
  */
