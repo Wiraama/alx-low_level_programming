@@ -5,6 +5,9 @@
  * main - Entry point to the Program
  * program that prints its name, followed by a new line
  * 
+ * @argc: number argument
+ * @argv[]: string with comman-line arguments
+ *
  * Return: Always 0
  */
 
