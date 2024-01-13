@@ -6,7 +6,7 @@
  * minimum number of coins to make change for an amount of money.
  * @argc: count
  * @argv: strings
- * 
+ *
  * Return: 1 if error, 0 otherwise
  */
 
