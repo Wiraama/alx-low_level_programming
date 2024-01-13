@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * main - print the min number of coins to make change for an amount of money
+ * main - Entry point
+ * minimum number of coins to make change for an amount of money.
  * @argc: count
  * @argv: strings
  * 
