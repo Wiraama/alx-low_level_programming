@@ -5,7 +5,7 @@
  *
  * @argc: receives numbers
  * @argv[]: receives string type
- * 
+ *
  * Return: always 0
  */
 
