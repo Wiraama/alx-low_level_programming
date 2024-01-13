@@ -5,7 +5,7 @@
  * program that prints all arguments it receives.
  *
  * @argc: receives numbers
- * @argv[]: receives string type
+ * @argv: receives string type
  *
  * Return: always 0
  */
