@@ -2,9 +2,9 @@
 /**
  * main - entry point
  * program that prints all arguments it receives.
- * 
+ *
  * @argc: receives numbers
- * @argv: receives string typede
+ * @argv: receives string type
  * 
  * Return: always 0
  */
