@@ -6,7 +6,11 @@
   *
   * Return: 1 for lowercase character or 0 for anything else
   */
-int _islower(int c)
+void test_islower(int n)
 {
-    return (c >= 97 && c <= 122);
+	int r;
+
+	r = _islower(n);
+	_putchar(r + '0');
+	_putchar('\n');
 }
