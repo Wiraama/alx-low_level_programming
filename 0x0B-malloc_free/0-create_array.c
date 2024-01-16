@@ -26,7 +26,8 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 	/**to initialize ARRAY**/
-	for (unsigned int i = 0; i < size; ++i)
+	unsigned int i;
+	for (i = 0; i < size; ++i)
 	{
 		ptr[i] = c;
 	}
