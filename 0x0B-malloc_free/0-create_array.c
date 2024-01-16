@@ -5,7 +5,6 @@
  * create_array - fuction prototype
  * function to create an array of char and initialize it with a specific char
  * @c: character to be initiallize
- * @ptr: pointer to the memory
  * @size: space in bytes
  *
  * Return: always 0
