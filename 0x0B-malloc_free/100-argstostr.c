@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 	}
 
 	/** Allocate memory on our machine using  malloc**/
-	result = (char *)malloc(sizeof(char));
+	result = (char *)malloc(sizeof(char) * 4);
 
 	if (result == NULL)
 	{
@@ -37,7 +37,7 @@ char *argstostr(int ac, char **av)
 	result[0] = '\0';
 	for (x = 0; x < ac; x++)
 	{
-		strcat(result, av[i]);
+		strcat(result, av[x]);
 		strcat(result, "\n");
 	}
 	return (result);
