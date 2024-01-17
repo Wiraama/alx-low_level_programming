@@ -10,30 +10,30 @@
  *
  * Return: nothing
  */
-
 char *str_concat(char *s1, char *s2)
 {
-	char str;
-	size_t len_1;
-	size_t len_2;
+	char *concat_str;
+	int index, concat_index = 0,  len = 0;
 
+	if (s1 == NULL)
+		s1 = "";
 
-	if (s1 == NULL || s2 == NULL)
-	{
+	if (s2 == NULL)
+		s2 = "";
+
+	for (index = 0; s1[index] || s2[index]; index++)
+		len++;
+
+	concat_str = malloc(sizeof(char) * len);
+
+	if (concat_str == NULL)
 		return (NULL);
-	}
-	/**calculate the length before concating**/
-	len_1 = strlen(s1);
-	len_2 = strlen(s2);
 
-	str = (char *)malloc(len_1 + len_2 + 1);
+	for (index = 0; s1[index]; index++)
+		concat_str[concat_index++] = s1[index];
 
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	strcpy(str, s1);/**copy s1 to str beforen join**/
-	strcat(str, s2);/**joining**/
+	for (index = 0; s2[index]; index++)
+		concat_str[concat_index++] = s2[index];
 
-	return (str);
+	return (concat_str);
 }
