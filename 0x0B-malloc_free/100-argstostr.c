@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 	}
 
 	/** Allocate memory on our machine using  malloc**/
-	result = (char *)malloc(sizeof(char) * 4);
+	result = (char *)malloc(sizeof(totalen + 1));
 
 	if (result == NULL)
 	{
