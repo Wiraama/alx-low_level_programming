@@ -38,8 +38,8 @@ char *argstostr(int ac, char **av)
 	for (x = 0; x < ac; x++)
 	{
 		strcat(result, av[x]);
-		strcat(result, \n);
-	int cddoncated = 0;
+		strcat(result, "\n");
+	int concated = 0;
 	}
 	return (result);
 
