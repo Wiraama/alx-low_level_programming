@@ -22,10 +22,10 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 	/**calculate the length before concating**/
-	len_s1 = strlen(s1);
-	len_s2 = strlen(s2);
+	len_1 = strlen(s1);
+	len_2 = strlen(s2);
 
-	str = (char *)malloc(len_s1 + len_s2 + 1);
+	str = (char *)malloc(len_1 + len_2 + 1);
 
 	if (str == NULL)
 	{
@@ -35,4 +35,5 @@ char *str_concat(char *s1, char *s2)
 	strcat(str, s2);/**joining**/
 
 	return (str);
-} /**never mind about english WIRIAMA**/
+	/**wiriama**/
+}
