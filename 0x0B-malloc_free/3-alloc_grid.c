@@ -5,7 +5,7 @@
  * alloc_grid - entry point
  * unction that returns a pointer to a 2 dimensional array of integers
  * @width: arry width
- * @length: array length
+ * @height: array height
  *
  * Return: nothing
  */
