@@ -13,6 +13,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
+	char str[];
 	size_t len_1;
 	size_t len_2;
 
@@ -35,5 +36,4 @@ char *str_concat(char *s1, char *s2)
 	strcat(str, s2);/**joining**/
 
 	return (str);
-	/**wiriama**/
 }
