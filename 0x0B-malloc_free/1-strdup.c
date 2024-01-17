@@ -13,6 +13,7 @@ char *_strdup(char *str)
 {
 	size_t i;
 	size_t length;
+	char *duplicate;
 
 	if (str == 0)
 	{
@@ -21,7 +22,7 @@ char *_strdup(char *str)
 	/** to get length of the input string**/
 	length = strlen(str);
 	/**allocate memory**/
-	char *duplicate = (char *)malloc((length + 1) * sizeof(char));
+	duplicate = (char *)malloc((length + 1) * sizeof(char));
 
 	if (duplicate == NULL)
 	{
