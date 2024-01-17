@@ -39,7 +39,6 @@ char *argstostr(int ac, char **av)
 	{
 		strcat(result, av[x]);
 		strcat(result, "\n");
-	int concated = 0;
 	}
 	return (result);
 
