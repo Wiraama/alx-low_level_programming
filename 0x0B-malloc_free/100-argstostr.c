@@ -35,7 +35,7 @@ char *argstostr(int ac, char **av)
 	}
 	/**concating arguments**/
 	result[0] = '\0';
-	for (x = 0; x < result; x++)
+	for (x = 0; x < ac; x++)
 	{
 		strcat(result, av[i]);
 		strcat(result, "\n");
