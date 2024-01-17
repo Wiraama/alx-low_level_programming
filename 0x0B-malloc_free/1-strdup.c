@@ -11,12 +11,15 @@
 
 char *_strdup(char *str)
 {
+	size_t i;
+	size_t length;
+
 	if (str == 0)
 	{
 		return (NULL);
 	}
 	/** to get length of the input string**/
-	size_t length = strlen(str);
+	length = strlen(str);
 	/**allocate memory**/
 	char *duplicate = (char *)malloc((length + 1) * sizeof(char));
 
@@ -26,7 +29,7 @@ char *_strdup(char *str)
 	}
 
 	/**copies and duplicates**/
-	for (size_t i = 0; i <= length; ++i)
+	for (i = 0; i <= length; ++i)
 	{
 		duplicate[i] = str[i];
 	}
