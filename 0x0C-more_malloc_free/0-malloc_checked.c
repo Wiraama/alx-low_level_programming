@@ -12,15 +12,14 @@
 void *malloc_checked(unsigned int b)
 {
 	void *ptr;
+
 	ptr = malloc(b);/**allocate memory**/
 
 	/**when malloc fails to terminite the normal process**/
 	if (ptr == NULL)
 	{
-		return (98);
+		exit(98);
 	}
-	else
-	{
-		return (ptr);
-	}
+
+	return (ptr);
 }
