@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * malloc_checked - main entry point
@@ -10,15 +11,16 @@
 
 void *malloc_checked(unsigned int b)
 {
-	result = (int *)malloc(unsigned int b);/**allocate memory**/
+	void *ptr;
+	ptr = malloc(b);/**allocate memory**/
 
 	/**when malloc fails to terminite the normal process**/
-	if (result == NULL)
+	if (ptr == NULL)
 	{
 		return (98);
 	}
 	else
 	{
-		return (result);
+		return (ptr);
 	}
 }
