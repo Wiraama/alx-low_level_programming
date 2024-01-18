@@ -44,7 +44,7 @@ char **strtow(char *str)
         return NULL;
     }
 
-    str -= count; // Reset str to the beginning of the string
+    str -= count;
 
     /** Copying the words **/
     i = 0;
