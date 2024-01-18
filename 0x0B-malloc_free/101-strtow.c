@@ -38,17 +38,17 @@ char **strtow(char *str)
     }
 
     /** Memory allocation **/
-    result = (char **)malloc(count + 1);
+    result = (char **)malloc((count + 1) * sizeof(char *));
     if (result == NULL)
     {
         return NULL;
     }
 
-    str = strtok(str, " "); /** Tokenize the original string **/
+    str -= count; // Reset str to the beginning of the string
 
     /** Copying the words **/
     i = 0;
-    while (str != NULL)
+    while (i < count)
     {
         result[i] = strdup(str); /** Duplicate each word using strdup **/
         if (result[i] == NULL)
