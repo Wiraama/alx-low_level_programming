@@ -10,8 +10,8 @@
  */
 char **strtow(char *str)
 {
-    int i, j, count = 0, word = 0;
-    char **result;
+    int i, count = 0, word = 0;
+    char **result, *token, *copy;
 
     /** Quit if the string is empty **/
     if (str == NULL || *str == '\0')
@@ -19,55 +19,54 @@ char **strtow(char *str)
         return NULL;
     }
 
-    /** Word counting **/
-    while (*str)
+    copy = strdup(str);  // Make a copy of the input string
+    if (copy == NULL)
     {
-        if (*str == ' ' || *str == '\0')
-        {
-            if (word)
-            {
-                count++;
-                word = 0;
-            }
-        }
-        else
-        {
-            word = 1;
-        }
-        str++;
+        return NULL;  // Memory allocation failed
+    }
+
+    /** Word counting **/
+    token = strtok(copy, " ");
+    while (token != NULL)
+    {
+        count++;
+        token = strtok(NULL, " ");
     }
 
     /** Memory allocation **/
     result = (char **)malloc((count + 1) * sizeof(char *));
     if (result == NULL)
     {
+        free(copy);
         return NULL;
     }
 
-    str = strtok(str, " "); /** Tokenize the original string **/
-
     /** Copying the words **/
     i = 0;
-    while (str != NULL)
+    token = strtok(str, " ");
+    while (token != NULL)
     {
-        result[i] = strdup(str); /** Duplicate each word using strdup **/
+        result[i] = strdup(token);
         if (result[i] == NULL)
         {
             /** Memory allocation failed, cleanup and return NULL **/
-            for (j = 0; j < i; j++)
+            for (int j = 0; j < i; j++)
             {
                 free(result[j]);
             }
             free(result);
+            free(copy);
             return NULL;
         }
 
         i++;
-        str = strtok(NULL, " ");
+        token = strtok(NULL, " ");
     }
 
     /** Set the last element of the array to NULL **/
     result[i] = NULL;
+
+    free(copy);  // Free the copied string
 
     return result;
 }
