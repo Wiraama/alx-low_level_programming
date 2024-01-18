@@ -18,7 +18,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *result;
 
 	/**allocating memory with s1 first bye of s2 and a null terminator**/
-	ptr = malloc(strlen(s1 + n + 1));
+	ptr = malloc(strlen(s1) + n + 1);
 
 	if (ptr == NULL)
 	{
@@ -31,11 +31,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		strcat(ptr, s2);
 	}
-	else /**Concatenate the first n bytes of s2**/
+	else/**Concatenate the first n bytes of s2**/
 	{
 		strncat(ptr, s2, n);
 	}
 	result = ptr;
 
-return (result);
+	return (result);
 }
