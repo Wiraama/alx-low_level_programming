@@ -10,8 +10,8 @@
  */
 char **strtow(char *str)
 {
-    int i, count = 0, word = 0;
-    char **result, *token;
+    int i, j, count = 0, word = 0;
+    char **result;
 
     /** Quit if the string is empty **/
     if (str == NULL || *str == '\0')
@@ -54,7 +54,7 @@ char **strtow(char *str)
         if (result[i] == NULL)
         {
             /** Memory allocation failed, cleanup and return NULL **/
-            for (int j = 0; j < i; j++)
+            for (j = 0; j < i; j++)
             {
                 free(result[j]);
             }
