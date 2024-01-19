@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
- * _calloc - Entry point to the program
+ * _memset - First n bytes of the memory area pointed to by s with b.
  * function that allocates memory for an array, using malloc
- * @nmemb: value
- * @size: value
+ * @s: character pointer
+ * @b: character
+ * @n: integer not to be negative
  *
  * Return: malloc pointer
  */
@@ -22,7 +23,8 @@ char *_memset(char *s, char b, unsigned int n)
 }
 
 /**
- * *_calloc - allocates memory for an array
+ * _calloc - allocates memory for an array
+ * function that allocates memory for an array, using malloc
  * @nmemb: number of elements in the array
  * @size: size of each element
  *
