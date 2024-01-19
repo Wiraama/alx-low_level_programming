@@ -37,8 +37,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
+	/**allocating the fucking memory**/
 	ptr = malloc(size * nmemb);
 
+	/**checking if the damn memory is allocated**/
 	if (ptr == NULL)
 		return (NULL);
 
