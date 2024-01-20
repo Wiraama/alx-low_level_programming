@@ -1,7 +1,15 @@
 #include "main.h"
 #include <stdlib.h>
 
-
+/**
+ * _realloc - main entry point
+ * unction that reallocates a memory block using malloc and free
+ * @ptr: pointer
+ * @old_size: allocated space for ptr
+ * @new_size: bytes of the new memory block
+ *
+ * Return: pointer
+ */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
