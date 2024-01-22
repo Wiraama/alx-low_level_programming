@@ -2,6 +2,6 @@
 #define PI_H
 #include <stdio.h>
 
-#define PI_H (3.14159265359)
+#define PI (3.14159265359)
 
-#ifndef
+#endif
