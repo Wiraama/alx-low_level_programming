@@ -1,9 +1,10 @@
 #include "main.h"
+#include<stdlib.h>
 #include <stdio.h>
 #include "dog.h"
 
 /**
- *  * main - check the code
+   * main - check the code
  *   *
  *    * Return: Always 0.
  *     */
