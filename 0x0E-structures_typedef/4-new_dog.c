@@ -27,20 +27,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/**copying/duplicating of the two strings and also creating memory**/
-	new_dog->name = malloc(strlen(name) + 1); /**+ 1 for null character**/
+	new_dog->name = strdup(name);
+	new_dog->owner = strdup(owner);
 
-
-	strcpy(new_dog->name, name);
-
-	new_dog->owner = malloc(strlen(owner) + 1);
-
-	strcpy(new_dog->owner, owner);
-
-	/**checkin ig memory allocation is successful**/
-	if (name == NULL || owner == NULL)
-	{
-		return (NULL);
-	}
 	new_dog->age = age;
 
 	return (new_dog);
