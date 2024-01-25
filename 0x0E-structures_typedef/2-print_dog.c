@@ -5,9 +5,6 @@
 /**
  * print_dog - main entry point
  * @d: struct details
- * @name: name to the dog
- * @owner: person owning
- * @age: old of dog
  *
  * Return: to main
  */
@@ -27,5 +24,7 @@ void print_dog(struct dog *d)
 	{
 		d->owner = "(nil)";
 	}
-	printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
+	printf("Name: %s\n", d->name);
+	printf("Age is: %f\n", d->age);
+	printf("Owner is: %s\n", d->owner);
 }
