@@ -5,7 +5,9 @@
 /**
  * get_op_func - main entry point
  * @s: string
+ * @get_op_func - main entry point
  *
+ * Return: bullshit
  */
 int (*get_op_func(char *s))(int, int)
 {

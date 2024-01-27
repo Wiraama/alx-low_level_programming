@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 /**
  * main - main fuction
  * @argc: parameter one
@@ -13,13 +14,15 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
-	int (*pointer)(int, int); /**fuction pointer**/
+
+	int (*pointer)(int, int);
+
 	int (*get_op_func(char *))(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 
 	/**converting strings to int form**/
@@ -31,7 +34,7 @@ int main(int argc, char *argv[])
 	if (pointer == NULL)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 
 	result = pointer(num1, num2);
