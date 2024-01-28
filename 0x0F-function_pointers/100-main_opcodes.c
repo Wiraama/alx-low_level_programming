@@ -36,10 +36,10 @@ int main(int argc, char *argv[])
 			}
 
 		}
-		printf("Error");
+		printf("Error\n");
 		exit(2);
 	}
-	printf("Error");
+	printf("Error\n");
 	exit(1);
 }
 
