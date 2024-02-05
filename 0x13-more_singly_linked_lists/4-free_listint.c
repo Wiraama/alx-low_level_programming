@@ -10,6 +10,7 @@
 void free_listint(listint_t *head)
 {
 	listint_t *temp; /** create a temporary pointer pointing current space**/
+
 	while (head != NULL)
 	{
 		temp = head; /**stores andress of current node in a pointer **/
