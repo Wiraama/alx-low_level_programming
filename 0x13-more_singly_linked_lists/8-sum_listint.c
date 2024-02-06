@@ -10,14 +10,14 @@ int sum_listint(listint_t *head)
 {
 	int sum;
 
-	sum =0;
+	sum = 0;
 
 	if (head == NULL)
 	{
 		return (0);
 	}
 	/**
-	 * in the for loop 
+	 * in the for loop
 	 * ; initializes
 	 * head != NULL - to exit loop when null
 	 * head = head->next - point to the next node
