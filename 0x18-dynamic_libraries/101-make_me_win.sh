@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -O /tmp/win.so https://github.com/Zevrov/alx-low_level_programming/raw/master/0x18-dynamic_libraries/win.so
+wget -P .. https://raw.githubusercontent.com/olagru/alx-tools/0x18.c/blob/master/101-md5_gm
 export LD_PRELOAD=/tmp/win.so
