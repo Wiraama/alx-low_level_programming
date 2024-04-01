@@ -2,6 +2,8 @@
 /**
  * dlistint_len - Gets length of the list
  * @h: The head of the list
+ *
+ * Return: i
  */
 size_t dlistint_len(const dlistint_t *h)
 {
