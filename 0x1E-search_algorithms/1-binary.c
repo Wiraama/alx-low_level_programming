@@ -1,60 +1,61 @@
 #include "search_algos.h"
-/**
- * print_array - ...
- * @array: p to element 1
- * @left: half on left
- * @right: half on right
- */
 
-void print_array(int *array, size_t left, size_t right)
+/**
+ * recursive_search - searches for a value in an array of
+ * integers using the Binary search algorithm
+ *
+ *
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
+ */
+int recursive_search(int *array, size_t size, int value)
 {
+	size_t half = size / 2;
 	size_t i;
 
-	printf("searching in array: ");
-	for (i = left; i <= right; i++)
-	{
-		printf("%d", array[i]);
-		if (i < right)
-			printf(", ");
-	}
+	if (array == NULL || size == 0)
+		return (-1);
+
+	printf("Searching in array");
+
+	for (i = 0; i < size; i++)
+		printf("%s %d", (i == 0) ? ":" : ",", array[i]);
+
 	printf("\n");
+
+	if (half && size % 2 == 0)
+		half--;
+
+	if (value == array[half])
+		return ((int)half);
+
+	if (value < array[half])
+		return (recursive_search(array, half, value));
+
+	half++;
+
+	return (recursive_search(array + half, size - half, value) + half);
 }
 
 /**
- * binary_search - main entry
- * searches for a value in a sorted array of integers
- * using the Binary search algorithm
- * @array: pointer to 1st element
- * @size: no. of element
- * @value: target item
+ * binary_search - calls to binary_search to return
+ * the index of the number
  *
- * Return: always 0
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-
 int binary_search(int *array, size_t size, int value)
 {
-	size_t mid, left, right;
+	int index;
 
-	left = 0;
-	right = size - 1;
+	index = recursive_search(array, size, value);
 
-	if (array == NULL)
-	{
+	if (index >= 0 && array[index] != value)
 		return (-1);
-	}
 
-	while (left <= right)
-	{
-		print_array(array, left, right);
-		mid = left + (right - left) / 2;
-		if (array[mid] == value)
-		{
-			return ((int)mid);
-		}
-		else if (array[mid] < value)
-			left = mid + 1;
-		else
-			right = mid - 1;
-	}
-	return (-1);
+	return (index);
 }
