@@ -4,6 +4,9 @@
  * jump_search - main entry point
  * function that searches for a value in a sorted array of
  * integers using the Jump search algorithm
+ * @array: pointer to first
+ * @size: size of aray
+ * @value: what to be searched
  *
  * Return: always to main
  */
